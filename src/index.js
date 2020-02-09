@@ -3,14 +3,14 @@ import ReactDOM from "react-dom"
 import './index.css';
 import 'tachyons';
 import App from "./App"
-import UserContext from "./userContext"
+import {UserContextProvider} from "./userContext"
 import * as serviceWorker from './serviceWorker';
 
 
 ReactDOM.render(
-    <UserContext.Provider value="Bob Proppies">
+    <UserContextProvider>
         <App />
-    </UserContext.Provider>, 
+    </UserContextProvider>, 
     document.getElementById("root")
 )
 // If you want your app to work offline and load faster, you can change
